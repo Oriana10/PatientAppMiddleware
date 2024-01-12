@@ -1,6 +1,5 @@
 import logging
 import sys
-from logtail import LogtailHandler
 
 token = 'FrH19SS8aswmGE5LXQeRoEa4'
 

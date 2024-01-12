@@ -3,16 +3,6 @@
     
 from fastapi import Request
 from fastapi.responses import StreamingResponse
-from pydantic import BaseModel
-from sqlalchemy import true
-
-class IPatient(BaseModel):
-    name: str
-    surname: str
-    typeOfDocument: str
-    documentNumber: str
-    medicalHistoryNumber: str
-    enabled: true
 
 @app.middleware("http")
 async def modify_request_response_middleware(request: Request, call_next):
