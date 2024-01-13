@@ -5,12 +5,20 @@ from middleware import log_middleware
 from starlette.middleware.base import BaseHTTPMiddleware
 import asyncio
 import requests
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Patient Middleware App",
     description="System meant for recording, timing and documentation of endpoints. It manages the information of a basic crud patient application.",
     port=8003
     )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.add_middleware(BaseHTTPMiddleware, dispatch=log_middleware)
 
 @app.get("/pacientes")

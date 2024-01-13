@@ -21,3 +21,6 @@ Records can be found on app.log file or it can also be easily configured to be d
 ## Endpoints Docs
 [Interface](http://localhost:8000/docs#/)
 ![Alt text](./assets/img/docs.png)
+
+# Back Connection
+![Alt text](./assets/img/established-connection.png)
